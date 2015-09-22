@@ -17,13 +17,13 @@ gulp.task('php', function() {
 gulp.task('browser-sync', ['php'], function() {
     browserSync({
         proxy: 'localhost:8010',
-        port: 8080,
+        port: 3000,
         open: true,
         notify: false
     });
 });
 
 gulp.task('default', ['browser-sync'], function () {
-    gulp.watch('./css/**/*.styl',['styles']);
+    gulp.watch('./css/**/*.styl',['styles', reload]);
     gulp.watch(['./*.php'], [reload]);
 });
