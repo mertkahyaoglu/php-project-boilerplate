@@ -1,20 +1,7 @@
 body {
-	
+  background-color: #fbf9f9;
 }
-
-@media (max-width: 767px) {
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-
-@media (min-width: 1200px) {
-}
-
 @font-face {
   font-family: 'acro';
-  src: url('../fonts/acro.ttf');
+  src: url("../fonts/acro.ttf");
 }
