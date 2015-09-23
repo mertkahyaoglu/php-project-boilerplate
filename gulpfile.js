@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     reload  = browserSync.reload;
 
 gulp.task('styles', function() {
-    gulp.src('css/**/*.styl')
+    gulp.src('./css/stylus/app.styl')
         .pipe(stylus())
         .pipe(gulp.dest('./css/'))
 });
@@ -24,6 +24,6 @@ gulp.task('browser-sync', ['php'], function() {
 });
 
 gulp.task('default', ['browser-sync'], function () {
-    gulp.watch('./css/**/*.styl',['styles', reload]);
+    gulp.watch('./css/stylus/*.styl',['styles', reload]);
     gulp.watch(['./*.php'], [reload]);
 });
